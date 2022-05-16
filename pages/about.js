@@ -1,5 +1,7 @@
+import Layout from "../components/Layout"
+
 export default function AboutPage() {
     return (
-        <div><h1>ABOUT</h1></div>
+        <Layout title='About Parasol'><h1>ABOUT</h1></Layout>
     )
 }
