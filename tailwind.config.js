@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'baloo-2': ["'Baloo 2'", 'cursive'],
-        'Libre-Bodoni': ['serif']
+        'libre-bodoni': ['serif']
  
       },
     },

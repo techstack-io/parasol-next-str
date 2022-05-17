@@ -1,23 +1,29 @@
 import Link from "next/link";
-import Layout from "../components/Layout";
+import Layout from "@/components/Layout";
+import Image from "next/image";
+import {FaBackward } from 'react-icons/fa'
 
 export default function NotFoundPage() {
   return (
     <Layout title='Page Not Found'>
             <div className="text-center my-10">
-              <h1 className="text-6xl font-Libre-Bodoni">Oops! That page can&apos;t be found</h1>
-              <br />
-              <p>
-                The page you are looking for might have been removed, had its
-                name changed or is temporarily unavailable.
-              </p>
-
+            <Image
+              src={'/static/404Custom.svg'}
+              alt="Page Not Found"
+              width="800"
+              height="400"
+              layout="intrinsic"
+            />
+           <br />
+           <br />
               <Link href="/">
-                <a className="btn-style-one red-light-color">
-                  Back to Home <i className="bx bx-chevron-right"></i>
+                <a className="content-center">
+                <FaBackward className="inline mr-2" /> 
+               Back Home
                 </a>
               </Link>
             </div>
+            <hr className="opacity-10" />
     </Layout>
   );
 }
