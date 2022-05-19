@@ -14,7 +14,7 @@ export default function Header() {
                 height={100}
                /></a>
         </Link>
-        <Link href='/events' className='z-50'>
+        <Link href='/events' className='z-100'>
             <a>Events</a>
         </Link>
         </div>
