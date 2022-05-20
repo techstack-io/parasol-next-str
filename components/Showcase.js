@@ -9,7 +9,7 @@ export default function Showcase() {
             </h1>
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 md:my-20 ">
             <Image
-            src="/static/hero-1-img.svg"
+            src="/static/hero-4-img.png"
             alt="Main Image"
             width={600}
             height={500}
