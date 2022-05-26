@@ -22,7 +22,6 @@ export default function HomePage({events}) {
         </Link>
       )}
     </div>
-
   </Layout>
   )
 }
