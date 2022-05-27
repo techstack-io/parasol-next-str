@@ -6,9 +6,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'baloo-2': ["'Baloo 2'", 'cursive'],
-        'libre-bodoni': ['serif']
- 
+        'baloo-2' : ['Baloo 2', 'cursive'],
+        'libre-bodoni' : ['serif'],
+        'tiro-devanagari-hindi' : ['Tiro Devanagari Hindi', 'serif'],
+        'tiro-kannada' : ['Tiro Kannada', 'serif'],
       },
     },
     colors: {
