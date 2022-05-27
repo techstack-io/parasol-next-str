@@ -1,6 +1,32 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Started and Contributing
+
+1.  fork the repot found at https://github.com/techstack-io/parasol-next-str
+
+2.  find a good place on your local computer and run the command `git clone https://github.com/techstack-io/parasol-next-str`
+
+3.  `cd` into parasol-next-str directory and run `npm install`
+
+4.  create a new branch with command `git checkout -b my_branch_name`
+
+5.  run the command `git remote add upstream https://github.com/techstack-io/parasol-next-str`
+
+6.  open your text editor of choice ex: `code .` to bring up visual studio code
+
+7.  run the command `npm run dev`
+
+8.  make your changes
+
+9. stop the development server with `control + c`
+
+10. `git status`
+
+11  `git add .`
+
+12. `git commit -m "message describing the work performed"`
+
+13. `git push -u origin my_branch_name`
 
 First, run the development server:
 
