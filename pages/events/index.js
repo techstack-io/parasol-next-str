@@ -21,7 +21,7 @@ export default function EventsPage({events}) {
   )
 }
 
-export async function getStaticProps () {
+export async function getServerSideProps () {
   const res = await fetch(`${API_URL}/api/events`)
   const events = await res.json()
 
