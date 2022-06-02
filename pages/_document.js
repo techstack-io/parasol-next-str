@@ -10,8 +10,6 @@ class MyDocument extends Document {
       <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@1&family=Tiro+Kannada&display=swap" rel="stylesheet" />
       <link rel="manifest" href="../public/manifest.json" />
       <link rel="apple-touch-icon" href="../public/icon-512x512.png" />
-      {/* Javascript Code */}
-      <script src="https://kit.fontawesome.com/4cdcba7205.js" crossOrigin="anonymous"></script>
         <body>
           <Main />
           <NextScript />
