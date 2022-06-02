@@ -4,48 +4,46 @@ import Image from 'next/image'
 import {API_URL} from '@/config/index'
 
 export default function EventPage({ evt }) {
-      
+  const deleteEvent = e => {
+    console.log('delete');
+  }
   return (
-    <Layout>
- <main className="lg:relative">
-        <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
-          <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="font-tiro-kannada block xl:inline">{evt.name}</span>{' '}
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
-            </p>
-            <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-              <div className="w-full rounded-md shadow">
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-desert-storm bg-purple hover:bg-desert-storm hover:text-purple md:py-4 md:text-lg md:px-10"
-                >
-                 Sign Up
-                </a>
-              </div>
-              <Link href={`/events/edit/${evt.id}`} className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-desert-storm hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-                >
-                     <i className="fa-solid fa-pen-to-square"></i>
-                  Edit
-                </a>
-              </Link>
-            </div>
-          </div>
+  <Layout>
+  <div className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
+    <div className="max-w-3xl mx-auto">
+      <div className="md:flex md:items-center md:justify-between">
+        <div className="flex-1 min-w-0">
+          <h2 className="text-2xl font-bold leading-7 sm:text-3xl sm:truncate">{evt.name}</h2>
         </div>
-        <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-          <img
-            className="absolute inset-0 w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-            alt=""
-          />
+        <div className="mt-4 flex md:mt-0 md:ml-4">
+          <button
+            type="button"
+            className="inline-flex items-center px-4 py-2 bg-desert-storm shadow-sm text-sm font-medium text-purple"
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+          </svg>
+          Edit Event
+          </button>
+          <button
+            type="button"
+            className="ml-3 inline-flex items-center px-4 py-2 shadow-sm text-sm font-medium bg-desert-storm text-blaze "
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+            Delete Event
+            <a
+              href="#"
+              onClick={deleteEvent}
+            >
+            </a>
+          </button>
         </div>
-      </main>
-    </Layout>
+      </div>
+    </div>
+  </div>
+</Layout>
   )
 }
 
