@@ -9,13 +9,64 @@ export default function EventPage({ evt }) {
   }
   return (
   <Layout>
-  <div className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
-    <div className="max-w-3xl mx-auto">
-      <div className="md:flex md:items-center md:justify-between">
-        <div className="flex-1 min-w-0">
-          <h2 className="text-2xl font-bold leading-7 sm:text-3xl sm:truncate">{evt.name}</h2>
+  <div className="relative bg-gray-800">
+      <div className="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+        <img
+          className="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
+          alt=""
+        />
+      </div>
+      <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="md:ml-auto md:w-1/2 md:pl-10">
+          <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">{evt.date} @ {evt.time}</h2>
+          <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">{evt.name}</p>
+          <p className="mt-3 text-lg text-gray-300">
+         {evt.description}
+          </p>
+          <div className="mt-8 space-x-4">
+            <div className="inline-flex rounded-md shadow">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center px-5 py-3 border border-purple text-base font-medium rounded-md"
+              >
+               Edit Event
+              </a>
+            </div>
+            <div className="inline-flex rounded-md shadow">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center px-5 py-3 border border-purple text-base font-medium rounded-md"
+              >
+               Delete Event
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="mt-4 flex md:mt-0 md:ml-4">
+      </div>
+    </div>
+      <div className="overflow-hidden shadow rounded-lg">
+      <div className="max-w-7xl mx-auto px-8 py-20 sm:px-6 lg:px-8">
+        <div>
+           {evt.date} @ {evt.time}
+        </div>
+        <h2 className="text-md font-bold leading-7 sm:text-3xl sm:truncate py-2">{evt.name}</h2>
+        <h3>Presented by: {evt.performers}</h3>
+          <p>Description: {evt.description}</p>
+    </div>
+    </div>
+  <div className="max-w-7xl mx-auto py-20 sm:px-6 lg:px-8">
+    <div>
+      <div className="md:flex md:items-center md:justify-between p-5">
+        <div className="flex-1 min-w-0">
+        {evt.date} @ {evt.time}
+          <h2 className="text-md font-bold leading-7 sm:text-3xl sm:truncate py-2">{evt.name}</h2>
+          <span className='whitespace-pre-line'>
+          <h3>Presented by: {evt.performers}</h3>
+          <p>Description: {evt.description}</p>
+          </span>
+        </div>
+        <div className="flex md:mt-2 md:ml-4">
           <button
             type="button"
             className="inline-flex items-center px-4 py-2 bg-desert-storm shadow-sm text-sm font-medium text-purple"
@@ -42,6 +93,16 @@ export default function EventPage({ evt }) {
         </div>
       </div>
     </div>
+    <figure>
+            <img
+              className="w-50 py-6 rounded-lg"
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
+              alt=""
+              width={1310}
+              height={873}
+            />
+            <figcaption>Sagittis scelerisque nulla cursus in enim consectetur quam.</figcaption>
+          </figure>
   </div>
 </Layout>
   )

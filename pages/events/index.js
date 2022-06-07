@@ -26,9 +26,7 @@ export async function getServerSideProps () {
   const events = await res.json()
 
   return {
-    props:  { events },
-    // revalidate acts as getServerSideProps
-    revalidate: 1,
+    props:  { events }
   }
 }
 
