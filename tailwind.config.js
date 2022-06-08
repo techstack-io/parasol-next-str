@@ -22,6 +22,7 @@ module.exports = {
       'sandy': '#EF955D',
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
+      'calm': '#E6E5E1',
       'bermuda': '#78dcca',
     },
   },
